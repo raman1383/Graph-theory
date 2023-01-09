@@ -1,12 +1,12 @@
-# a SSSP(single source shortest path) for graphs with non-negative edges
+# a SSSP(single source the shortest path) for graphs with non-negative edges
 # O(E * log(V))
 
-class Graph():
+class Graph:
 
     def __init__(self, vertices):
         self.V = vertices
-        self.graph = [[0 for column in range(vertices)]
-                      for row in range(vertices)]
+        self.graph = [[0 for _ in range(vertices)]
+                      for _ in range(vertices)]
 
     def printSolution(self, dist):
         print("Vertex \t Distance from Source")
@@ -15,16 +15,16 @@ class Graph():
 
     # A utility function to find the vertex with
     # minimum distance value, from the set of vertices
-    # not yet included in shortest path tree
-    def minDistance(self, dist, sptSet):
+    # not yet included in the shortest path tree
+    def minDistance(self, dist, spt_et):
 
         # Initialize minimum distance for next node
         min = 1e7
 
-        # Search not nearest vertex not in the
+        # Search not the nearest vertex not in the
         # shortest path tree
         for v in range(self.V):
-            if dist[v] < min and sptSet[v] == False:
+            if dist[v] < min and spt_et[v] == False:
                 min = dist[v]
                 min_index = v
 
