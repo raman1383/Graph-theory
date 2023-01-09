@@ -3,8 +3,6 @@ from sys import maxsize
 
 V = 4
 
-# implementation of traveling Salesman Problem
-
 
 def travelingSalesmanProblem(in_graph, start):
     # store all vertex apart from source vertex
